@@ -1,0 +1,44 @@
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+    <title>Home Page</title>
+{% endblock %}
+
+{% block body_block  %}
+<center>
+
+<u style="color:green;"><h2> {{Qcl.title}}</h2><br></u>
+
+<style>
+    .td{
+        padding: 10px;
+        margin: 10px;
+    }
+    .tr1{
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
+
+
+<table border="2px" style="text-align: center;">
+    
+    {% for i in Qcl.question.all %}
+
+        <tr style="color:green;" class="tr1">
+        <td class="td1"> {{i.description}}</td>
+        <td> {{i.user}}</td>
+    
+        
+     
+         
+     {% endfor %}
+
+</table>
+
+</center>
+
+
+
+
+{% endblock %}
